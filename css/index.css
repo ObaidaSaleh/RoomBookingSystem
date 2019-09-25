@@ -1,0 +1,161 @@
+*
+{
+    margin: 0px;	
+    padding: 0px;
+}
+
+#grid
+{	
+    display:grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "header header header" "content content content" "footer footer footer";
+    height: 100vh;
+}
+
+#header
+{
+    grid-area: header;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#content
+{
+    grid-area:content;
+    display:grid;
+	grid-template-rows: 3fr 7fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". welcome ." ". form ." ". . .";
+    justify-items: center;
+    align-items: center;
+}
+
+#footer
+{
+    grid-area:footer;
+}
+
+#loginForm
+{
+    display: none;
+}
+
+#welcome
+{
+    grid-area: welcome;
+	text-align: center;
+}
+
+#registerForm
+{
+    grid-area: form;
+    display: grid;
+	width: 100%;
+    grid-template-rows: repeat(4,50px) 30px 50px;
+    grid-template-areas: "first . last" "email email email" "username username username" "password . cfmpassword" "terms terms terms" "submit submit submit";
+    grid-row-gap: 5px;
+	align-content: center;
+	justify-content: center;
+}
+
+#firstName
+{
+    grid-area: first;
+}
+
+#lastName
+{
+    grid-area: last;
+}
+
+#email
+{
+    grid-area: email;
+}
+
+#registerUser
+{	
+    grid-area: username;
+}
+
+#password
+{
+    grid-area: password;
+}
+
+#cfmpassword
+{
+    grid-area: cfmpassword;
+}
+
+#submit
+{
+    grid-area:submit;
+    background-color: rgb(0, 183, 255);
+    border: none;
+    color: white;
+}
+
+#submit:hover
+{
+    background-color: rgb(0, 163, 228);
+}
+
+#switchTab
+{
+	display: grid;
+    grid-template-columns: repeat(2,1fr);
+	grid-template-area: 50px;
+    grid-template-areas: "login signup";
+    border: 2px solid rgb(0, 183, 255);
+	overflow: hidden;
+}
+
+#switchTab > a
+{
+	padding: 10px;
+	border: none;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	padding: 12px 14px;
+}
+
+#login
+{
+    grid-area: login;
+    background-color: white;
+    color: rgb(0, 183, 255);
+}
+
+#signUp
+{
+    grid-area:signup;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+
+#terms
+{
+    grid-area: terms;
+}
+
+.registerButtons:focus
+{
+    outline: 2px solid rgb(0, 183, 255);
+    background-color: rgb(252, 252, 252);
+}
+
+.registerButtons
+{
+    padding-left: 20px;
+}
+
+#content > a
+{
+    color: rgb(0, 163, 228);
+	font-size: 11px;
+}

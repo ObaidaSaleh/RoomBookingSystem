@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+	<html lang = "en">
+		<head>
+			<link rel="stylesheet" type="text/css" href="../css/firstPage.css">
+			<link rel="stylesheet" type="text/css" href="delete.css">
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title> Login </title>
+		</head>
+		<body>
+			<div id="grid">
+				<div id="header">
+					<div id="switchTab">
+						<a id="book" href="login.html"> Book a Room </a>
+						<a id="edit" href="delete.html"> Edit a Booking </a>
+						<a id="settings" href="index.html"> Settings </a>
+					</div> 
+				</div>
+				<div id="content">
+					<div id="amountOfRooms">
+						<h3 id="instruction"> Please select the amount of different bookings that you want to make. </h3>
+						<div class="amountButtons">
+							<button onclick="myFunction()" class="dropbtn" class="show" id="dropdownMenu">Amount</button>
+							<div id="amount" class="dropdown-content">
+								<button onclick="menuDissapear(1)"> 1 </button>
+								<button onclick="menuDissapear(2)"> 2 </button>
+								<button onclick="menuDissapear(3)"> 3 </button>
+								<button onclick="menuDissapear(4)"> 4 </button>
+								<button onclick="menuDissapear(5)"> 5 </button>
+								<button onclick="menuDissapear(6)"> 6 </button>
+								<button onclick="menuDissapear(7)"> 7 </button>
+								<button onclick="menuDissapear(8)"> 8 </button>
+								<button onclick="menuDissapear(9)"> 9 </button>
+								<button onclick="menuDissapear(10)"> 10 </button>
+							</div>
+						</div>
+					</div>
+					<div id="bookings">
+							<form method='post' action='' id='book1'>
+								<input type='text' name='day' id='day1' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block1' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room1' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm1" class="bookingButtons"> Confirm </button>
+								<button id="delete1" class="bookingButtons"> Delete </button> 
+								<button id="change1" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book2'>
+								<input type='text' name='day' id='day2' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block2' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room2' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm2" class="bookingButtons"> Confirm </button>
+								<button id="delete2" class="bookingButtons"> Delete </button> 
+								<button id="change2" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book3'>
+								<input type='text' name='day' id='day3' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block3' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room3' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm3" class="bookingButtons"> Confirm </button>
+								<button id="delete3" class="bookingButtons"> Delete </button> 
+								<button id="change3" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book4'>
+								<input type='text' name='day' id='day4' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block4' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room4' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm4" class="bookingButtons"> Confirm </button>
+								<button id="delete4" class="bookingButtons"> Delete </button> 
+								<button id="change4" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book5'>
+								<input type='text' name='day' id='day5' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block5' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room5' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm5" class="bookingButtons"> Confirm </button>
+								<button id="delete5" class="bookingButtons"> Delete </button> 
+								<button id="change5" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book6'>
+								<input type='text' name='day' id='day6' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block6' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room6' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm6" class="bookingButtons"> Confirm </button>
+								<button id="delete6" class="bookingButtons"> Delete </button> 
+								<button id="change6" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book7'>
+								<input type='text' name='day' id='day7' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block7' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room7' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm7" class="bookingButtons"> Confirm </button>
+								<button id="delete7" class="bookingButtons"> Delete </button> 
+								<button id="change7" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book8'>
+								<input type='text' name='day' id='day8' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block8' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room8' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm8" class="bookingButtons"> Confirm </button>
+								<button id="delete8" class="bookingButtons"> Delete </button> 
+								<button id="change8" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book9'>
+								<input type='text' name='day' id='day9' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block9' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room9' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm9" class="bookingButtons"> Confirm </button>
+								<button id="delete9" class="bookingButtons"> Delete </button> 
+								<button id="change9" class="bookingButtons"> Change </button>
+							</form>
+							<form method='post' action='' id='book10'>
+								<input type='text' name='day' id='day10' placeholder='MM/DD/YY' class='bookingForms' class="dayButtons">
+								<input type='text' name='block' id='block10' placeholder='Block' class='bookingForms' class="blockButtons">
+								<input type='text' name='room' id='room10' placeholder='Room' class='bookingForms' class="roomButtons">
+								<button id="confirm10" class="bookingButtons"> Confirm </button>
+								<button id="delete10" class="bookingButtons"> Delete </button> 
+								<button id="change10" class="bookingButtons"> Change </button>
+							</form>
+					</div>
+				</div>	
+				<div id="footer">
+						
+				</div>	
+			</div>
+			<script src="../js/firstPage.js"> </script>
+			<script src="delete.js"> </script>
+		</body>
+	</html>

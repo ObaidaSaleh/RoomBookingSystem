@@ -1,0 +1,667 @@
+*
+{
+    margin: 0px;	
+    padding: 0px;
+}
+
+#grid
+{	
+    display:grid;
+    grid-template-rows: 1fr 8fr 1fr;
+	gird-template-columns: 1fr;
+    grid-template-areas: "header" "content" "footer";
+    height: 100vh;
+}
+
+#header
+{
+	display: grid;
+	grid-area: header;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: ". switchTab .";
+	justify-items: center;
+	align-items: center;
+}
+
+#content
+{
+	display: grid;
+	grid-area: content;
+	grid-template-rows: 1fr 5fr;
+	gird-template-columns: 1fr;
+	grid-template-areas: "amountOfRooms" "bookings";
+	justify-items: center;
+	align-items: center;
+}
+
+#amountOfRooms
+{
+	display: grid;
+	grid-area: amountOfRooms;
+	justify-items: center;
+	align-items: center;
+}
+
+#switchTab
+{
+	display: grid;
+	grid-area: switchTab;
+    grid-template-columns: repeat(3,1fr);
+	grid-template-area: 50px;
+    grid-template-areas: "book edit settings";
+    border: 2px solid rgb(0, 183, 255);
+	overflow: hidden;
+}
+
+#switchTab > a
+{
+	padding: 10px;
+	border: none;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	padding: 12px 14px;
+}
+
+#book
+{
+    grid-area: book;
+    background-color: white;
+    color: rgb(0, 183, 255);
+}
+
+#edit
+{
+    grid-area: edit;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+
+#settings
+{
+    grid-area: settings;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+
+#bookings
+{
+	display: grid;
+	grid-area: bookings;
+	grid-template-columns: 1fr 15fr 1fr;
+	grid-template-rows: repeat(10,1fr);
+	grid-template-areas: " . book1 . " ". book2 ." ". book3 ." ". book4 ." ". book5 ." ". book6 ." ". book7 ." ". book8 ." ". book9 ." ". book10 .";
+	grid-row-gap: 125px;
+	width: 80%;
+}
+
+#book1
+{
+	display: none;
+	grid-area: book1;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day1 block1 room1 . confirm1"
+	"day1 block1 room1 . delete1"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day1
+{
+	grid-area: day1;
+}
+
+#block1
+{
+	grid-area: block1;
+}
+
+#room1
+{
+	grid-area: room1;
+}
+
+#confirm1
+{
+	grid-area: confirm1;
+}
+
+#delete1
+{
+	grid-area: delete1;
+}
+
+#book2
+{
+	display: none;
+	grid-area: book2;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day2 block2 room2 . confirm2"
+	"day2 block2 room2 . delete2"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day2
+{
+	grid-area: day2;
+}
+
+#block2
+{
+	grid-area: block2;
+}
+
+#room2
+{
+	grid-area: room2;
+}
+
+#confirm2
+{
+	grid-area: confirm2;
+}
+
+#delete2
+{
+	grid-area: delete2;
+}
+
+#book3
+{
+	display: none;
+	grid-area: book3;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day3 block3 room3 . confirm3"
+	"day3 block3 room3 . delete3"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day3
+{
+	grid-area: day3;
+}
+
+#block3
+{
+	grid-area: block3;
+}
+
+#room3
+{
+	grid-area: room3;
+}
+
+#confirm3
+{
+	grid-area: confirm3;
+}
+
+#delete3
+{
+	grid-area: delete3;
+}
+
+
+#book4
+{
+	display: none;
+	grid-area: book4;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day4 block4 room4 . confirm4"
+	"day4 block4 room4 . delete4"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day4
+{
+	grid-area: day4;
+}
+
+#block4
+{
+	grid-area: block4;
+}
+
+#room4
+{
+	grid-area: room4;
+}
+
+#confirm4
+{
+	grid-area: confirm4;
+}
+
+#delete4
+{
+	grid-area: delete4;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+#book5
+{
+	display: none;
+	grid-area: book5;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day5 block5 room5 . confirm5"
+	"day5 block5 room5 . delete5"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day5
+{
+	grid-area: day5;
+}
+
+#block5
+{
+	grid-area: block5;
+}
+
+#room5
+{
+	grid-area: room5;
+}
+
+#confirm5
+{
+	grid-area: confirm5;
+}
+
+#delete5
+{
+	grid-area: delete5;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+#book6
+{
+	display: none;
+	grid-area: book6;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day6 block6 room6 . confirm6"
+	"day6 block6 room6 . delete6"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day6
+{
+	grid-area: day6;
+}
+
+#block6
+{
+	grid-area: block6;
+}
+
+#room6
+{
+	grid-area: room6;
+}
+
+#confirm6
+{
+	grid-area: confirm6;
+}
+
+#delete6
+{
+	grid-area: delete6;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+#book7
+{
+	display: none;
+	grid-area: book7;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day7 block7 room7 . confirm7"
+	"day7 block7 room7 . delete7"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day7
+{
+	grid-area: day7;
+}
+
+#block7
+{
+	grid-area: block7;
+}
+
+#room7
+{
+	grid-area: room7;
+}
+
+#confirm7
+{
+	grid-area: confirm7;
+}
+
+#delete7
+{
+	grid-area: delete7;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+#book8
+{
+	display: none;
+	grid-area: book8;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day8 block8 room8 . confirm8"
+	"day8 block8 room8 . delete8"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day8 
+{
+	grid-area: day8;
+}
+
+#block8
+{
+	grid-area: block8;
+}
+
+#room8
+{
+	grid-area: room8;
+}
+
+#confirm8
+{
+	grid-area: confirm8;
+}
+
+#delete8
+{
+	grid-area: delete8;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+#book9
+{
+	display: none;
+	grid-area: book9;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day9 block9 room9 . confirm9"
+	"day9 block9 room9 . delete9"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day9
+{
+	grid-area: day9;
+}
+
+#block9
+{
+	grid-area: block9;
+}
+
+#room9
+{
+	grid-area: room9;
+}
+
+#confirm9
+{
+	grid-area: confirm9;
+}
+
+#delete9
+{
+	grid-area: delete9;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+#book10
+{
+	display: none;
+	grid-area: book10;
+	grid-template-rows: 1fr 5fr 5fr 1fr;
+	grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+	grid-template-areas: 
+	". . . . ."
+	"day10 block10 room10 . confirm10"
+	"day10 block10 room10 . delete10"
+	". . . . .";
+	background-color: rgb(0, 183, 255);
+	border: 2px solid rgb(0, 19, 26);
+	height: 100px;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+#day10
+{
+	grid-area: day10;
+}
+
+#block10
+{
+	grid-area: block10;
+}
+
+#room10
+{
+	grid-area: room10;
+}
+
+#confirm10
+{
+	grid-area: confirm10;
+	display: none;
+}
+
+#delete10
+{
+	grid-area: delete10;
+	display: none;
+}
+
+#change10
+{
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	height: 100%;
+}
+
+.dropbtn 
+{
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	display: none;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	width: 200px;
+	background-color: #f2f2f2;
+}
+
+.dropdown-content button:hover {background-color: #d9d9d9}
+
+.show {display:block;}
+
+.bookingForms
+{
+	padding-left: 20px;
+	height: 40px;
+}
+
+.bookingForms:focus
+{
+    outline: 2px solid rgb(0, 56, 77);
+    background-color: rgb(252, 252, 252);
+}
+
+.bookingButtons
+{
+	width: 40%;
+	height: 80%;
+	background-color: white;
+	border: 1px solid black;
+}
+
+

@@ -1,0 +1,79 @@
+td:last-child
+{
+	background-color: #F00;
+	color:#FFF;
+	cursor: pointer;
+    font-weight: bold;
+	text-decoration: underline
+}
+						  
+#date
+{  
+    color: rgb(0, 183, 255);
+}
+
+#roomNumber
+{  
+    color: rgb(0, 183, 255);
+}
+
+
+#block
+{  
+    color: rgb(0, 183, 255);
+}
+
+
+#delete
+{  
+    color: rgb(0, 183, 255);
+}
+
+table, td, th 
+{    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+
+h1	
+{
+	text-align: center;
+	color: white;
+	background-color: rgb(0, 183, 255);
+}
+
+#logOut:hover 
+{
+	background-color: white;
+    color: rgb(0, 183, 255);
+	text-decoration: underline;	
+}
+
+#logOut
+{
+	float: right;
+	font-size : 14px;
+	width: 8%;
+	height: 30%;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

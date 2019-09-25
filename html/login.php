@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+	<html lang = "en">
+		<head>
+			<link rel="stylesheet" type="text/css" href="login.css">
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title> Login </title>
+		</head>
+		<body>
+			<div id="grid">
+				<div id="header">
+					<div id="switchTab">
+						<a id="login" href="login.php"> Login </a>
+						<a id="signUp" href="index.php"> Sign Up </a>
+					</div> 
+				</div>
+				<div id="content">
+					<div id="welcome"> 
+						<h3> Welcome! </br> </h3>
+							<p> </br> Please login or sign up if you do not have an account. </p>
+					</div>
+					<form id="register">
+						<input type="text" id="username" placeholder="Email/Username" class="loginForm">
+						<input type="password" id="password" placeholder="Password" class="loginForm">
+						<input type="submit" id="submit" value="Login">
+					</form>
+				</div>
+				<div id="footer">
+				
+				</div>
+			</div>
+			<style src="login.js"> </style>
+		</body>
+	</html>

@@ -1,0 +1,85 @@
+<?php
+	session_start();
+	if(!isset($_SESSION['username']))
+	{
+		echo "Please login first";
+		header("Location:login.php");
+	}
+?>
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title> Delete Booking </title>
+		<link rel="stylesheet" href="delete.css" >
+</head>
+
+<body>
+
+	
+	 <button id="logOut"> <a href="alert.html"> Log out </a></button>
+	 <br>
+	<h1> Delete Booking </h1>
+	<table id="myTable" border="1" style="width:100%">
+
+	
+		<tr>
+            <th id="date" name="date" >Date</th>
+			<th id="roomNumber" name="roomNumber" >Room Number</th>
+			<th id="block" name="block">Block</th>
+            <th id="delete" name="delete"> Delete Booking</th>
+		</tr>
+		
+	</table>
+		
+<button onclick="myFunction()">Add a new row</button> 
+	   
+        <script src="delete.js"> </script>
+		<?php
+			$debugger = false;
+					
+				//load the MySQL credentials.
+				require_once 'SQL_login.php';
+										
+				//Establish a connection to the MySQL server.
+				$server = mysql_connect($server_host, $server_user, $server_password);
+				if (!$server)
+				{
+					die("Unable to conncet to $dbhost : ".mysql_error());
+				}//end of if (!$server)
+				else
+				{
+					if($debugger)echo "<p>Connected to MySQL via login: $server</p>";
+				}//end of if ($server)
+									
+				//Specify the database to be used and confirm the result.	
+				$sqlCommand = "USE $database";
+				$sqlResult = mysql_query($sqlCommand,$server);
+				if($debugger)echo "<p>$sqlCommand: $sqlResult</p>";
+				
+				$username = $_SESSION['username'];
+				
+				$sqlCommand = "SELECT * FROM booking WHERE username = '$username'";
+				$sqlResult= mysql_query($sqlCommand,$server);				
+				if($debugger)echo "<p> $sqlCommand: $sqlResult</p>";
+				
+				
+				echo "<table>";
+				echo "<tr><th>roomNumber</th><th>block</th><th>date</th></tr>";
+				
+				while($row = mysql_fetch_array($sqlResult,MYSQL_ASSOC))
+				{
+					echo "<tr><td>";
+					echo $row['roomNumber'];
+					echo "</td><td>";
+					echo $row['block'];
+					echo "</td><td>";
+					echo $row['date'];
+					echo "</td></tr>";
+					
+				}
+		?>
+		<a href='logout.php'>Click here to log out</a>
+    </body>
+	
+</html>
